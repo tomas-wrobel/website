@@ -1,0 +1,129 @@
+export const title = "Native Event Emitter";
+export const img = "typescript-logo.png";
+export const date = "2023-05-21";
+
+Today, let's see how to create TypeScript Event Emitter utility. We will use standard `EventTarget`
+constructor.
+
+### EventTarget itself
+
+All DOM elements inherits from EventTarget. Unlike them, EventTarget is a legal constructor.
+
+See:
+
+```ts
+const target = new EventTarget();
+
+target.addEventListener("some_event", function (e: Event) {
+    console.log(e);
+});
+```
+
+To emit an event we need construct Event:
+
+```ts
+target.dispatchEvent(new Event("some_event"));
+```
+
+### Extending Event Target
+
+We will extend EventTarget to mimic EventEmitter
+
+| EventTarget           | EventEmitter |
+| --------------------- | ------------ |
+| `addEventListener`    | `on`, `once` |
+| `removeEventListener` | `off`        |
+| `dispatchEvent`       | `emit`       |
+
+```ts
+class EventEmitter extends EventTarget {
+    on(type: string, func: () => void) {
+        this.addEventListener(type, func);
+    }
+
+    once(type: string, func: () => void) {
+        this.addEventListener(type, func, {once: true});
+    }
+
+    off(type: string, func: () => void) {
+        this.removeEventListener(type, func);
+    }
+
+    emit(type: string) {
+        this.dispatchEvent(new Event(type));
+    }
+}
+```
+
+### Extending Event
+
+What about handling some data?
+
+```ts
+class SomeEvent extends Event {
+    // Some data
+    priority = 3;
+
+    constructor() {
+        super("some_event");
+    }
+}
+
+target.addEventListener("some_event", function (e: SomeEvent) {
+    console.log(e.priority);
+});
+
+target.dispatchEvent(new SomeEvent());
+```
+
+### Typings
+
+```ts
+class Emitter<E extends Record<string, new (...args: any[]) => Event>> extends EventTarget {
+    constructor(public events: E) {
+        super();
+    }
+
+    on<T extends keyof E>(event: T, listener: (e: InstanceType<E[T]>) => void) {
+        this.addEventListener(event as string, listener as (e: Event) => void);
+        return this;
+    }
+
+    once<T extends keyof E>(event: T, listener: (e: InstanceType<E[T]>) => void) {
+        this.addEventListener(event as string, listener as (e: Event) => void, {once: true});
+        return this;
+    }
+
+    off<T extends keyof E>(event: T, listener: (e: InstanceType<E[T]>) => void) {
+        this.removeEventListener(event as string, listener as (e: Event) => void);
+        return this;
+    }
+
+    emit<T extends keyof E>(event: T, ...args: ConstructorParameters<E[T]>) {
+        this.dispatchEvent(new this.events[event](...args));
+        return this;
+    }
+}
+```
+
+We can use the Emitter with predefined constructors:
+
+```ts
+class AdvancedEvent extends Event {
+    constructor(public x: number, public y: number) {
+        super("advanced");
+    }
+}
+
+const emitter = new Emitter({
+    base: Event,
+    advanced: AdvancedEvent,
+});
+
+emitter.on("advanced", function ({x, y}) {
+    console.log(x, y);
+});
+
+emitter.emit("base", "advanced");
+emitter.emit("advanced", 7, 8);
+```
