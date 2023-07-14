@@ -1,1 +1,1 @@
-module.exports = require("@next/mdx")()();
+module.exports = require("@next/mdx")()({webpack5: false});
