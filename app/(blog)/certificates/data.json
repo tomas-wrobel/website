@@ -1,0 +1,68 @@
+[
+    {
+        "author": "SoloLearn",
+        "date": "11-05-2022",
+        "id": "csharp",
+        "name": "C# (C Sharp)"
+    },
+    {
+        "author": "SoloLearn",
+        "date": "07-06-2018",
+        "id": "css",
+        "name": "Cascading StyleSheets"
+    },
+    {
+        "author": "freeCodeCamp",
+        "date": "05-20-2021",
+        "id": "data-visualization",
+        "name": "Data Visualization"
+    },
+    {
+        "author": "freeCodeCamp",
+        "id": "front-end-libs",
+        "date": "05-07-2021",
+        "name": "Front End Development Libraries"
+    },
+    {
+        "author": "SoloLearn",
+        "id": "html",
+        "date": "07-03-2018",
+        "name": "HyperText Markup Language"
+    },
+    {
+        "author": "SoloLearn",
+        "name": "JavaScript",
+        "id": "javascript",
+        "date": "12-31-2020"
+    },
+    {
+        "author":"freeCodeCamp",
+        "name": "JavaScript Algorithms and Data Structures",
+        "id": "javascript-algorithms",
+        "date": "04-25-2020"
+    },
+    {
+        "author": "SoloLearn",
+        "date": "04-09-2018",
+        "id": "jquery",
+        "name": "jQuery"
+    },
+    {
+        "author": "SoloLearn",
+        "date": "11-10-2020",
+        "id": "python",
+        "name": "Python Core"
+    },
+    {
+        "author": "SoloLearn",
+        "date": "05-21-2020",
+        "id": "react-redux",
+        "name": "React + Redux"
+    },
+    {
+        "author": "freeCodeCamp",
+        "date": "05-17-2020",
+        "id": "responsive-web-design",
+        "name": "Responsive Web Design"
+    }
+]

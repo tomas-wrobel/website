@@ -1,22 +1,12 @@
-import {readdir} from "fs/promises";
 import Blog from "../paginated";
+import data from "./data.json";
 
 export default async function CertificatesPage() {
-    const data: Blog.Data[] = [];
+    const blog = data.map<Blog.Data>(s => ({
+        ...s,
+        img: `/certificates/${s.id}/img.png`,
+        url: `/certificates/${s.id}/doc.pdf`,
+    }));
 
-    for (const id of await readdir("public/certificates")) {
-        const json = await import(
-            `../../../public/certificates/${id}/data.json`
-        );
-        data.push({
-            id,
-            author: json.issued_by,
-            date: json.date,
-            img: `/certificates/${id}/img.png`,
-            name: json.name,
-            url: `/certificates/${id}/`,
-        });
-    }
-
-    return <Blog data={data} heading="My certificates" />;
+    return <Blog data={blog} heading="My certificates" />;
 }

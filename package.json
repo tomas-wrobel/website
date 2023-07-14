@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/mdx": "^2.0.5",
+    "@types/webpack": "^5.28.1",
     "sass": "^1.63.6"
   }
 }
