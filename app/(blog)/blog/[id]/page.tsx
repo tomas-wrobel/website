@@ -3,6 +3,7 @@ import WithHighlight from "./with-highlight";
 
 export default async function BlogPage({params}: {params: {id: string}}) {
     const {default: Component, ...json} = await import(
+        /*webpackIgnore: true*/
         `../../../../blog/${params.id}`
     );
 

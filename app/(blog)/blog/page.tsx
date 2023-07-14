@@ -5,7 +5,9 @@ export default async function BlogPage() {
     const data: Blog.Data[] = [];
 
     for (const id of await readdir("blog")) {
-        const json = await import(`../../../blog/${id}`);
+        const json = await import(
+            /*webpackIgnore: true*/ `../../../blog/${id}`
+        );
         data.push({
             id,
             author: "Tomáš Wróbel",

@@ -4,6 +4,7 @@ export default async function CertificatePage({
     params: {id: string};
 }) {
     const {default: json} = await import(
+        /*webpackIgnore: true*/
         `../../../public/certificates/${params.id}/data.json`
     );
 

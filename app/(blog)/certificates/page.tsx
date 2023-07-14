@@ -6,6 +6,7 @@ export default async function CertificatesPage() {
 
     for (const id of await readdir("public/certificates")) {
         const json = await import(
+            /*webpackIgnore: true*/
             `../../../public/certificates/${id}/data.json`
         );
         data.push({
