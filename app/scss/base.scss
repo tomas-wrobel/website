@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: $px-body;
     line-height: $px-line-height;
@@ -8,6 +12,7 @@ body {
         color: $px-body-light;
         font-weight: 400;
     }
+    overflow-x: hidden;
 }
 
 img {

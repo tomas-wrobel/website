@@ -1,5 +1,4 @@
 import "highlight.js/scss/monokai-sublime.scss";
-import WithHighlight from "./with-highlight";
 
 export default async function BlogPage({params}: {params: {id: string}}) {
     const {default: Component, ...json} = await import(
@@ -7,7 +6,7 @@ export default async function BlogPage({params}: {params: {id: string}}) {
     );
 
     return (
-        <div className="single-certificates">
+        <div className="single-blog">
             <div className="container">
                 <div className="blog-feature-img">
                     <img src={json.img} title="" alt="" />
@@ -37,7 +36,6 @@ export default async function BlogPage({params}: {params: {id: string}}) {
                             </div>
                             <div className="article-content">
                                 <Component />
-                                <WithHighlight />
                             </div>
                         </article>
                     </div>

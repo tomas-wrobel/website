@@ -29,12 +29,6 @@ target.dispatchEvent(new Event("some_event"));
 
 We will extend EventTarget to mimic EventEmitter
 
-| EventTarget           | EventEmitter |
-| --------------------- | ------------ |
-| `addEventListener`    | `on`, `once` |
-| `removeEventListener` | `off`        |
-| `dispatchEvent`       | `emit`       |
-
 ```ts
 class EventEmitter extends EventTarget {
     on(type: string, func: () => void) {

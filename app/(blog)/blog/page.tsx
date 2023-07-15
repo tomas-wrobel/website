@@ -16,5 +16,7 @@ export default async function BlogPage() {
         });
     }
 
+    data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
     return <Blog data={data} heading="Blog" />;
 }
