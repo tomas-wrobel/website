@@ -88,7 +88,7 @@ const About: FunctionComponent = () => (
                             learnt Flutter from its own documentation only.
                         </p>
                         <p>
-                            If you are interested more, you are free to contact
+                            If you're interested in more, feel free to contact
                             me.
                         </p>
                         <div className="skill-lt">
