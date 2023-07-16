@@ -13,7 +13,7 @@ const Services: FunctionComponent = () => (
                         <div className="feature-content media-body">
                             <h5>Responsive Design</h5>
                             <p>
-                                Webs created by me work on all devices, so you
+                                Websites by me work on all devices, so you
                                 can increase the number of potential customers.
                             </p>
                         </div>
@@ -39,8 +39,7 @@ const Services: FunctionComponent = () => (
                             <h5>Design</h5>
                             <p>
                                 Although I am not an artist, I can implement
-                                various designs. I can also create a design but
-                                not an advanced one.
+                                various designs. I can also create a simple one.
                             </p>
                         </div>
                     </div>
@@ -53,7 +52,7 @@ const Services: FunctionComponent = () => (
                             <p>
                                 These days, SSL certificate is a must. I can
                                 install it for you. I also know how to protect
-                                your databases, for example if you launched an
+                                your databases, e. g. if you launched an
                                 online store.
                             </p>
                         </div>
