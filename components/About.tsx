@@ -21,7 +21,7 @@ const About: FunctionComponent = () => (
                         <div className="about-text">
                             <h3>I{"'"}m a student with great skills</h3>
                             <p>
-                                I{"'"}ve done programming since I was 12. I{"'"}
+                                I{"'"}ve been programming since I was 12. I{"'"}
                                 m from the Czech Republic. These days I develop
                                 open-source Web or Flutter apps. I{"'"}m also a
                                 student at the Grammar school of Wichterle.
