@@ -23,7 +23,7 @@ const Blog: FunctionComponent<Blog.Props> = ({
                     <h3>{heading}</h3>
                 </div>
                 <div className="row">
-                    {data.slice(active - 1, active + sort - 1).map(data => (
+                    {data.slice((active - 1) * sort, active * sort).map(data => (
                         <div
                             className="col-md-6 m-15px-tb blog-list-item"
                             key={data.id}

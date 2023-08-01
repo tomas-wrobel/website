@@ -142,8 +142,8 @@ const About: FunctionComponent = () => (
                     </div>
                 </div>
             </div>
+            <div className="separated" />
         </div>
-        <div className="separated" />
     </section>
 );
 

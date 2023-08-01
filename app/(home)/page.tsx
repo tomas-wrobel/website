@@ -23,6 +23,7 @@ export default async function Home() {
                                         apps with seamless cross-platform
                                         experiences.
                                     </p>
+                                    {/*
                                     <div className="btn-bar">
                                         <a
                                             className="px-btn px-btn-theme"
@@ -31,6 +32,7 @@ export default async function Home() {
                                             Download CV
                                         </a>
                                     </div>
+                                    */}
                                 </div>
                             </div>
                             <div className="col-lg-6">
