@@ -25,7 +25,7 @@ const CertificatesMenu: FunctionComponent = () => {
                 </Link>
             </li>
             <li>
-                <Link href="/blog" className="nav-link">
+                <Link href="/#blog" className="nav-link">
                     <span>Blog</span>
                 </Link>
             </li>

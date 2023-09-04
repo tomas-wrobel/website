@@ -57,7 +57,7 @@ const Menu: FunctionComponent = () => {
                 </Link>
             </li>
             <li>
-                <Link className="nav-link" href="/blog">
+                <Link className="nav-link" href="#blog">
                     <span>Blog</span>
                 </Link>
             </li>
