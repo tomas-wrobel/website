@@ -52,11 +52,6 @@ const Menu: FunctionComponent = () => {
                 </a>
             </li>
             <li>
-                <Link className="nav-link" href="/certificates">
-                    <span>Certificates</span>
-                </Link>
-            </li>
-            <li>
                 <Link className="nav-link" href="#blog">
                     <span>Blog</span>
                 </Link>

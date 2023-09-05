@@ -3,6 +3,7 @@ import Contact from "../../components/Contact";
 import Services from "../../components/Services";
 import TypingAnimation from "../../components/TypingAnimation";
 import Blog from "../../components/Blog";
+import Link from "next/link";
 
 export default async function Home() {
 	return (
@@ -22,16 +23,14 @@ export default async function Home() {
 										Passionate web developer fluent in Flutter. Creating stunning websites and apps
 										with seamless cross-platform experiences.
 									</p>
-									{/*
                                     <div className="btn-bar">
-                                        <a
+                                        <Link
                                             className="px-btn px-btn-theme"
-                                            href="#"
+                                            href="/certificates"
                                         >
-                                            Download CV
-                                        </a>
+                                            See Certificates
+                                        </Link>
                                     </div>
-                                    */}
 								</div>
 							</div>
 							<div className="col-lg-6">

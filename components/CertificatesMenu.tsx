@@ -20,11 +20,6 @@ const CertificatesMenu: FunctionComponent = () => {
                 </Link>
             </li>
             <li>
-                <Link href="/certificates" className="nav-link">
-                    <span>Certificates</span>
-                </Link>
-            </li>
-            <li>
                 <Link href="/#blog" className="nav-link">
                     <span>Blog</span>
                 </Link>
