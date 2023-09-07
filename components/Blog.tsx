@@ -18,7 +18,7 @@ export default async function Blog() {
 								</Link>
 							</div>
 							<div className="blog-info">
-								<div className="meta">{new Date(blog.date).toLocaleString("en")}</div>
+								<div className="meta">{new Date(blog.date).toLocaleDateString("en")}</div>
 								<h6>
 									<Link href={blog.url}>
 										{blog.name}
