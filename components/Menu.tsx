@@ -52,9 +52,9 @@ const Menu: FunctionComponent = () => {
                 </a>
             </li>
             <li>
-                <Link className="nav-link" href="#blog">
+                <a className="nav-link" href="#blog">
                     <span>Blog</span>
-                </Link>
+                </a>
             </li>
             <li>
                 <a className="nav-link" href="#contactus">
