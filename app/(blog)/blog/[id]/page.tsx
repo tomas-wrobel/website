@@ -1,5 +1,10 @@
 import "highlight.js/scss/monokai-sublime.scss";
 
+export async function generateStaticParams() {
+    const fs = await import("fs/promises");
+    return fs.readdir("../../../../blog");
+}
+
 export default async function BlogPage({params}: {params: {id: string}}) {
     const {default: Component, ...json} = await import(
         `../../../../blog/${params.id}`
