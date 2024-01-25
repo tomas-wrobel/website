@@ -13,16 +13,20 @@
     bottom: 0;
     top: 0;
     background: $px-bg-3;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
+
     .scroll-bar {
         height: calc(100% - 50px);
     }
+
     .hl-top {
         text-align: center;
         position: relative;
         padding: 65px 25px 25px;
+
         &:after {
             content: "";
             position: absolute;
@@ -36,6 +40,7 @@
             height: 310px;
             background: $px-theme;
         }
+
         .img {
             width: 100px;
             height: 100px;
@@ -45,6 +50,7 @@
             border-radius: 50%;
             border: 5px solid $px-white;
         }
+
         h5 {
             margin: 15px 0 0;
             font-weight: 300;
@@ -52,62 +58,75 @@
             font-size: 13px;
             letter-spacing: 7px;
             color: $px-white;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
         }
     }
+
     .nav-menu {
         padding-top: 45px;
         padding-bottom: 45px;
+
         li {
             width: 100%;
+
             + li {
                 border-top: 1px solid rgba($px-white, 0.03);
-                .theme-light & {
+
+                @include px-light {
                     border-top: 1px solid rgba($px-dark, 0.03);
                 }
             }
+
             .nav-link {
                 margin: 0;
                 padding: 15px 30px;
                 color: rgba($px-white, 0.8);
                 text-decoration: none;
-                @include transition(ease all 0.35s);
+                transition: ease all 0.35s;
                 font-size: 12px;
                 font-weight: 300;
                 letter-spacing: 3px;
                 text-transform: uppercase;
                 line-height: 18px;
-                .theme-light & {
+
+                @include px-light {
                     color: rgba($px-dark, 0.7);
                     font-weight: 400;
                 }
+
                 i {
                     font-size: 18px;
                     font-weight: 300;
                     display: inline-block;
                     vertical-align: middle;
                 }
+
                 span {
                     display: inline-block;
                     vertical-align: middle;
                     margin-left: 10px;
                 }
+
                 @include up-sm {
                     &:hover {
                         color: $px-white;
-                        .theme-light & {
+
+                        @include px-light {
                             color: $px-theme;
                         }
                     }
                 }
             }
+
             &.active {
                 a {
                     color: $px-theme;
                     font-weight: 600;
-                    .theme-light & {
+
+                    @include px-light {
                         font-weight: 600;
                         color: $px-theme;
                     }
@@ -115,19 +134,23 @@
             }
         }
     }
+
     .social-icons {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         padding: 12px 0;
+
         a {
             color: $px-white;
             font-size: 14px;
             margin-right: 17px;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
+
             &:hover {
                 color: $px-theme;
             }
@@ -147,21 +170,26 @@
     width: 100%;
     z-index: 11;
     background: $px-bg-1;
-    .theme-light & {
+
+    @include px-light {
         background: $px-white;
     }
+
     > .d-flex {
         align-items: center;
     }
+
     .navbar-brand {
         padding: 0;
     }
+
     .logo-text {
         font-weight: 600;
         color: $px-white;
         font-size: 25px;
         line-height: 1;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
@@ -178,6 +206,7 @@
     background: $px-theme;
     border: none;
     margin-left: auto;
+
     span {
         position: absolute;
         top: 0;
@@ -197,10 +226,12 @@
     .mob-header {
         display: block;
     }
+
     .header-left {
-        @include transition(ease all 0.35s);
+        transition: ease all 0.35s;
         left: -300px;
         z-index: 222;
+
         &.menu-open {
             left: 0;
         }
@@ -209,15 +240,18 @@
 
 #pp-nav {
     margin-right: 50px;
+
     @include down-md {
         display: none;
     }
+
     li {
         margin: 6px 0;
         padding: 0;
         width: 10px;
         height: 10px;
         position: relative;
+
         a {
             position: absolute;
             top: 0;
@@ -225,12 +259,15 @@
             right: 0;
             background: rgba($px-white, 0.3);
             border-radius: 50%;
-            .theme-light & {
+
+            @include px-light {
                 background: rgba($px-dark, 0.3);
             }
+
             &.active {
                 background: $px-theme;
             }
+
             span {
                 display: none;
             }

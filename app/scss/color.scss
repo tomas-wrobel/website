@@ -1,6 +1,7 @@
 .dark-bg {
 	background: $px-bg-2;
-	.theme-light & {
+
+	@include px-light {
 		background: $px-gray;
 	}
 }

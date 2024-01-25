@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import {useEffect, type FunctionComponent} from "react";
 
 const Menu: FunctionComponent = () => {

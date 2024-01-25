@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import {type FunctionComponent, useState} from "react";
+import {type FunctionComponent, useState, useRef, useEffect} from "react";
 import CertificatesMenu from "./CertificatesMenu";
 import Menu from "./Menu";
 import classNames from "clsx";
@@ -9,6 +9,24 @@ const Header: FunctionComponent<{certificates?: boolean}> = ({
     certificates,
 }) => {
     const [sideBar, setSideBar] = useState(false);
+    const dom = useRef<HTMLElement>(null);
+
+    // When sideBar = true, listen for outside click
+    useEffect(() => {
+        if (sideBar) {
+            function outside(e: MouseEvent) {
+                if (!dom.current?.contains(e.target as Node)) {
+                    setSideBar(false);
+                }
+            }
+
+            document.addEventListener("click", outside);
+
+            return function () {
+                document.removeEventListener("click", outside);
+            };
+        }
+    }, [sideBar]);
 
     return (
         <>
@@ -38,6 +56,7 @@ const Header: FunctionComponent<{certificates?: boolean}> = ({
                     "menu-open": sideBar,
                     "menu-open-desk": sideBar,
                 })}
+                ref={dom}
             >
                 <div className="scroll-bar">
                     <div className="hl-top">

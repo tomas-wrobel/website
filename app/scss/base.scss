@@ -7,11 +7,13 @@ body {
     line-height: $px-line-height;
     font-size: $px-font-size;
     font-weight: 300;
-    &.theme-light {
+
+    @include px-light {
         background: $px-white;
         color: $px-body-light;
         font-weight: 400;
     }
+
     overflow-x: hidden;
 }
 
@@ -25,7 +27,8 @@ img {
 
 a {
     color: $px-theme;
-    @include px-hover {
+
+    &:hover {
         color: darken($px-theme, 8%);
         text-decoration: none;
     }

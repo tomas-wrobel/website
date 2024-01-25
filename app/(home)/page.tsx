@@ -29,13 +29,14 @@ export default async function Home() {
                                             href="/certificates"
                                         >
                                             See Certificates
+
                                         </Link>
                                     </div>
 								</div>
 							</div>
 							<div className="col-lg-6">
 								<div className="hb-img">
-									<img src="/img/languages.svg" alt="" />
+									<img src="/img/intro.webp" alt="" />
 								</div>
 							</div>
 						</div>

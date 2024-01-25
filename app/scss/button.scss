@@ -9,19 +9,23 @@
     font-weight: 400;
     letter-spacing: 2px;
     text-decoration: none !important;
-    @include transition(ease all 0.35s);
+    transition: ease all 0.35s;
+
     &.px-btn-theme {
         background: $px-theme;
         color: $px-white;
         box-shadow: 4px 4px $px-white;
-        .theme-light & {
+
+        @include px-light {
             box-shadow: 4px 4px $px-dark;
         }
+
         &:hover {
             background: $px-white;
             color: $px-theme;
             box-shadow: 4px 4px $px-theme;
-            .theme-light & {
+
+            @include px-light {
                 background: $px-dark;
                 color: $px-white;
             }

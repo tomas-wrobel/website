@@ -1,60 +1,71 @@
 .blog-grid {
     .blog-img {
         overflow: hidden;
+
         img {
-            @include transition(ease all 0.35s);
-            @include scale(1);
+            transition: ease all 0.35s;
+            transform: scale(1);
         }
     }
+
     .blog-info {
         background: $px-dark;
         padding: 25px;
         margin: -80px 0 0 50px;
         position: relative;
-        .theme-light & {
+
+        @include px-light {
             background: $px-gray;
         }
+
         @include down-md {
             margin-left: 40px;
         }
+
         @include down-sm {
             margin-left: 25px;
         }
+
         .meta {
             font-size: 12px;
         }
+
         h6 {
             font-size: 24px;
             font-weight: 500;
             padding-top: 10px;
+
             @include down-sm {
                 font-size: 20px;
             }
         }
+
         a {
             color: $px-white;
             background-image: linear-gradient(130deg, $px-white, $px-white);
             background-position: 0% 100%;
             background-repeat: no-repeat;
             background-size: 0% 1px;
-            @include transition(ease all 0.35s);
-            .theme-light & {
+            transition: ease all 0.35s;
+
+            @include px-light {
                 color: $px-dark;
                 background-image: linear-gradient(130deg, $px-dark, $px-dark);
             }
         }
     }
+
     &:hover {
         .blog-info {
             a {
                 background-size: 100% 2px;
             }
         }
+
         .blog-img {
             img {
                 filter: grayscale(1);
-                -webkit-filter: grayscale(1);
-                @include scale(1.1);
+                transform: scale(1.1);
             }
         }
     }
@@ -78,22 +89,26 @@
             text-align: center;
             line-height: 35px;
             background: rgba($px-white, 0.1);
-            .theme-light & {
+
+            @include px-light {
                 background: rgba($px-dark, 0.2);
                 color: $px-dark;
                 font-weight: 500;
             }
+
             &:hover {
                 background: $px-theme;
                 border-color: $px-theme;
                 color: $px-white;
             }
         }
+
         &.disabled {
             .page-link {
                 opacity: 0.5;
             }
         }
+
         &.active {
             .page-link {
                 background: $px-theme;
@@ -114,10 +129,12 @@
         margin-right: 4px;
         margin-bottom: 4px;
         font-weight: 400;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
             background: $px-gray;
         }
+
         &:hover {
             background: $px-theme;
             color: $px-white;
@@ -130,12 +147,15 @@
     padding-bottom: 120px;
     background: $px-bg-1;
     min-height: 100%;
-    .theme-light & {
+
+    @include px-light {
         background: $px-white;
     }
+
     @include down-md {
         padding-bottom: 80px;
     }
+
     @include down-sm {
         padding-bottom: 50px;
     }
@@ -146,9 +166,11 @@
     padding-bottom: 100px;
     background: $px-bg-1;
     min-height: 100%;
-    .theme-light & {
+
+    @include px-light {
         background: $px-white;
     }
+
     @include down-md {
         padding-top: 100px;
         padding-bottom: 40px;
@@ -157,48 +179,60 @@
 
 .article {
     margin: 15px 0 30px;
+
     .article-title {
         padding: 15px 0 20px;
+
         h6 {
             font-size: 14px;
             font-weight: 700;
             margin-bottom: 20px;
+
             a {
                 text-transform: uppercase;
                 color: $px-theme;
                 border-bottom: 1px solid $px-theme;
             }
         }
+
         h2 {
             color: $px-white;
             font-weight: 600;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
+
             @include down-md {
                 font-size: 28px;
             }
         }
+
         .media {
             padding-top: 15px;
             border-bottom: 1px dashed rgba($px-white, 0.1);
             padding-bottom: 20px;
-            .theme-light & {
+
+            @include px-light {
                 border-bottom: 1px dashed rgba($px-dark, 0.1);
             }
+
             .avatar {
                 width: 45px;
                 height: 45px;
                 border-radius: 50%;
                 overflow: hidden;
             }
+
             .media-body {
                 padding-left: 8px;
+
                 label {
                     font-weight: 600;
                     color: $px-theme;
                     margin: 0;
                 }
+
                 span {
                     display: block;
                     font-size: 12px;
@@ -208,6 +242,7 @@
     }
 
     .article-content {
+
         h1,
         h2,
         h3,
@@ -218,32 +253,39 @@
             font-weight: 500;
             margin-bottom: 15px;
             margin-top: 30px;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
         }
+
         blockquote {
             max-width: 600px;
             padding: 15px 0 30px 0;
             margin: 0;
+
             p {
                 font-size: 20px;
                 font-weight: 500;
                 color: $px-theme;
                 margin: 0;
             }
+
             .blockquote-footer {
                 color: $px-white;
                 font-size: 16px;
-                .theme-light & {
+
+                @include px-light {
                     color: $px-dark;
                 }
+
                 cite {
                     font-weight: 600;
                 }
             }
         }
     }
+
     .tag-cloud {
         padding-top: 10px;
     }
@@ -254,15 +296,18 @@
     overflow: hidden;
     background: $px-dark;
     padding: 30px;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
+
     h4 {
         color: $px-white;
         font-weight: 700;
         margin-bottom: 25px;
         font-size: 22px;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }

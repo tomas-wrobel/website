@@ -14,7 +14,8 @@
     border-radius: 50%;
     z-index: 1111;
     cursor: pointer;
-    .theme-light & {
+
+    @include px-light {
         background: $px-dark;
         color: $px-white;
     }
@@ -34,7 +35,8 @@
     border-radius: 50%;
     z-index: 1111;
     cursor: pointer;
-    .theme-light & {
+
+    @include px-light {
         background: $px-dark;
         color: $px-white;
     }
@@ -44,12 +46,15 @@
 ---------------------*/
 .pp-section {
     background: $px-bg-1;
-    .theme-light & {
+
+    @include px-light {
         background: $px-white;
     }
 }
+
 .section {
     padding: 100px 0;
+
     @include down-sm {
         padding-bottom: 60px;
     }
@@ -68,9 +73,11 @@
 -----------------------------------*/
 .title {
     margin-bottom: 35px;
+
     @include down-sm {
         margin-bottom: 25px;
     }
+
     h3 {
         color: $px-white;
         margin: 0;
@@ -82,12 +89,15 @@
         vertical-align: top;
         text-transform: uppercase;
         letter-spacing: 6px;
+
         @include down-sm {
             letter-spacing: 2px;
         }
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
+
         &:after {
             content: "";
             width: 6px;
@@ -100,6 +110,7 @@
             z-index: -1;
             background: $px-theme;
         }
+
         &:before {
             content: "";
             position: absolute;
@@ -117,6 +128,7 @@
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
+
     &:after {
         content: "";
         position: absolute;
@@ -128,14 +140,17 @@
         height: 1px;
         background: $px-white;
         opacity: 0.1;
-        .theme-light & {
+
+        @include px-light {
             background: $px-dark;
         }
     }
+
     @include down-md {
         padding-top: 80px;
         padding-bottom: 80px;
     }
+
     @include down-sm {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -149,7 +164,8 @@
     right: 0;
     bottom: 0;
     opacity: 0.1;
-    .theme-light & {
+
+    @include px-light {
         background: $px-dark;
     }
 }
@@ -163,6 +179,7 @@
     right: 0;
     bottom: 0;
     z-index: 0;
+
     .glitch {
         position: absolute;
         top: 0;
@@ -181,6 +198,7 @@
 .home-banner {
     overflow: hidden;
     position: relative;
+
     &:after {
         content: "";
         position: absolute;
@@ -191,79 +209,100 @@
         border-radius: 50%;
         background: $px-dark;
         z-index: 0;
-        .theme-light & {
+
+        @include px-light {
             background: $px-gray;
         }
     }
+
     .container {
         position: relative;
         z-index: 1;
     }
+
     .full-screen {
         min-height: 100vh;
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
     .hb-img {
         img {
+            border-radius: 100%;
+            background: $px-theme;
+
             @include up-md {
                 max-width: 120%;
             }
         }
     }
+
     .type-box {
         padding-top: 40px;
         padding-bottom: 40px;
+
         h6 {
             color: $px-white;
             font-size: 25px;
             font-weight: 500;
             margin: 0 0 20px;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
+
             @include down-sm {
                 font-size: 18px;
                 margin: 0 0 10px;
             }
         }
+
         h1 {
             font-size: 65px;
             font-weight: 700;
             line-height: 1;
             margin: 0 0 20px;
             color: $px-white;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
+
             @include down-lg {
                 font-size: 70px;
             }
+
             @include down-sm {
                 font-size: 45px;
                 margin-bottom: 15px;
             }
         }
+
         .lead {
             color: $px-white;
             font-weight: 500;
             font-size: 18px;
             margin-bottom: 25px;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
+
             @include down-sm {
                 font-size: 16px;
                 margin-bottom: 15px;
             }
         }
+
         .desc {
             max-width: 450px;
             font-size: 18px;
+
             @include down-sm {
                 font-size: 16px;
             }
         }
+
         .btn-bar {
             padding-top: 15px;
         }
@@ -276,33 +315,40 @@
     @include down-md {
         margin-bottom: 40px;
     }
+
     .img {
         @include down-md {
             text-align: center;
         }
     }
+
     .info {
         text-align: center;
         padding-top: 40px;
         color: $px-white;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
+
         h3 {
             font-weight: 500;
 
             font-size: 30px;
         }
+
         p {
             margin: 0;
             font-size: 16px;
         }
     }
+
     .social-icons {
         position: absolute;
         bottom: -15px;
         left: 0;
         right: 0;
+
         a {
             width: 35px;
             height: 35px;
@@ -314,29 +360,37 @@
             border-radius: 50%;
             position: relative;
             margin: 0 5px;
-            @include transition(ease all 0.35s);
-            .theme-light & {
+            transition: ease all 0.35s;
+
+            @include px-light {
                 background: $px-dark;
                 color: $px-white;
             }
-            @include scale(1);
+
+            transform: scale(1);
+
             i {
                 line-height: inherit;
             }
+
             &:nth-child(1) {
                 top: -25px;
             }
+
             &:nth-child(2) {
                 top: -8px;
             }
+
             &:nth-child(4) {
                 top: -8px;
             }
+
             &:nth-child(5) {
                 top: -25px;
             }
+
             &:hover {
-                @include scale(1.1);
+                transform: scale(1.1);
                 background: $px-theme;
                 color: $px-white;
             }
@@ -348,34 +402,42 @@
     @include up-lg {
         padding-left: 50px;
     }
+
     .title {
         margin-bottom: 40px;
     }
+
     .about-text {
         h3 {
             color: $px-white;
             margin-bottom: 25px;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
         }
     }
+
     .media {
         padding-top: 10px;
+
         span {
             font-size: 50px;
             line-height: 1;
             color: $px-white;
             font-weight: 600;
             min-width: 55px;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-dark;
             }
         }
+
         .media-body {
             padding-left: 10px;
             line-height: 1.3;
         }
+
         .after-k {
             &:after {
                 content: "k";
@@ -384,11 +446,14 @@
             }
         }
     }
+
     .btn-bar {
         padding-top: 35px;
+
         .px-btn {
             min-width: 150px;
             text-align: center;
+
             + .px-btn {
                 margin-left: 22px;
             }
@@ -404,13 +469,16 @@
     overflow: hidden;
     z-index: 1;
     background: $px-dark;
-    @include transition(ease background 0.35s);
-    .theme-light & {
+    transition: ease background 0.35s;
+
+    @include px-light {
         background: $px-gray;
     }
+
     @include down-md {
         padding: 20px;
     }
+
     .icon {
         width: 60px;
         height: 60px;
@@ -418,42 +486,55 @@
         font-size: 40px;
         color: $px-white;
         text-align: center;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     .feature-content {
         padding-left: 25px;
+
         @include down-md {
             padding-left: 15px;
         }
     }
+
     h5 {
         margin-bottom: 15px;
         color: $px-white;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     p {
         margin: 0;
     }
+
     &:hover {
         background: $px-theme;
+
         .icon {
             color: $px-white;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-white;
             }
         }
+
         h5 {
             color: $px-white;
-            .theme-light & {
+
+            @include px-light {
                 color: $px-white;
             }
         }
+
         p {
-            .theme-light & {
+
+            @include px-light {
                 color: $px-white;
             }
         }
@@ -468,31 +549,39 @@
     overflow: hidden;
     margin-top: 15px;
     margin-bottom: 25px;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
+
     .avatar {
         width: 100px;
         height: 100px;
         overflow: hidden;
+
         @include down-sm {
             width: 50px;
             height: 50px;
         }
     }
+
     .media-body {
         padding-left: 25px;
+
         @include down-sm {
             padding-left: 15px;
         }
     }
+
     h6 {
         color: $px-white;
         margin: 0 0 5px;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     span {
         font-size: 13px;
     }
@@ -506,46 +595,59 @@
     width: 100%;
     margin-top: 15px;
     background: $px-dark;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
 }
+
 .resume-row {
     padding: 35px;
+
     @include down-md {
         padding: 20px;
     }
+
     + .resume-row {
         border-top: 1px solid rgba($px-white, 0.05);
-        .theme-light & {
+
+        @include px-light {
             border-top: 1px solid rgba($px-dark, 0.05);
         }
     }
+
     h6 {
         color: $px-white;
         font-weight: 500;
         font-size: 20px;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     .rb-left {
         min-height: 100%;
         text-align: center;
+
         @include up-sm {
             border-right: 1px solid rgba($px-white, 0.05);
-            .theme-light & {
+
+            @include px-light {
                 border-right: 1px solid rgba($px-dark, 0.05);
             }
         }
+
         @include down-sm {
             margin-bottom: 25px;
             text-align: left;
+
             img {
                 max-width: 100px;
             }
         }
     }
+
     .rb-time {
         display: inline-block;
         padding: 5px 10px;
@@ -558,27 +660,33 @@
         position: absolute;
         top: 0;
         right: 0;
+
         @include down-sm {
             position: relative;
             margin-bottom: 14px;
             vertical-align: top;
         }
     }
+
     h6 {
         margin-bottom: 5px;
     }
+
     label {
         font-size: 13px;
         margin-bottom: 12px;
+
         @include down-sm {
             width: 100%;
             margin-bottom: 6px;
         }
     }
+
     .rb-right {
         p {
             margin-bottom: 0;
             max-width: 80%;
+
             @include down-md {
                 max-width: 100%;
             }
@@ -590,10 +698,12 @@
     h3 {
         color: $px-white;
         margin: 0 0 15px;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     p {
         padding-bottom: 10px;
     }
@@ -601,6 +711,7 @@
 
 .skill-lt {
     position: relative;
+
     span {
         width: 14px;
         height: 14px;
@@ -610,55 +721,67 @@
         right: -1px;
         top: -5px;
     }
+
     &:not(:first-child) {
         margin-top: 25px;
     }
+
     h6 {
         font-size: 14px;
         margin: 0 0 10px;
         font-weight: 400;
         color: $px-white;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     .skill-bar {
         position: relative;
         background: rgba($px-white, 0.2);
-        .theme-light & {
+
+        @include px-light {
             background: rgba($px-dark, 0.1);
         }
 
         .skill-bar-in {
             width: 80px;
             position: relative;
-            @include transition(ease all 0.55s);
+            transition: ease all 0.55s;
             height: 5px;
             background: $px-theme;
         }
     }
 }
+
 .aducation-box {
     margin: 0;
     padding: 0;
     background: $px-dark;
     list-style: none;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
+
     @include down-md {
         margin-bottom: 10px;
     }
+
     p {
         margin: 0;
     }
+
     h6 {
         color: $px-white;
         margin: 5px 0;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     span {
         background: $px-theme;
         color: $px-white;
@@ -670,6 +793,7 @@
         margin-left: -24px;
         position: relative;
         margin-bottom: 9px;
+
         &:after {
             content: "";
             position: absolute;
@@ -679,11 +803,14 @@
             border-left: 5px solid transparent;
         }
     }
+
     li {
         padding: 20px 20px;
+
         + li {
             border-top: 1px solid rgba($px-white, 0.05);
-            .theme-light & {
+
+            @include px-light {
                 border-top: 1px solid rgba($px-dark, 0.05);
             }
         }
@@ -695,70 +822,87 @@
 .contact-info {
     background: $px-dark;
     padding: 30px;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
+
     @include down-md {
         margin-bottom: 20px;
     }
+
     h4 {
         font-size: 28px;
         color: $px-white;
         font-weight: 500;
         margin-bottom: 20px;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     p {
         font-size: 16px;
     }
+
     ul {
         margin: 0;
         padding: 10px 0 0;
         list-style: none;
     }
+
     li {
         font-size: 18px;
         font-weight: 500;
         color: $px-white;
         line-height: 1.3;
         position: relative;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
+
         i {
             width: 30px;
             text-align: center;
             color: $px-theme;
             font-size: 22px;
         }
+
         span {
             padding-left: 10px;
         }
+
         + li {
             padding-top: 20px;
         }
     }
 }
+
 .contact-form {
     background: $px-dark;
     padding: 30px;
-    .theme-light & {
+
+    @include px-light {
         background: $px-gray;
     }
+
     @include down-md {
         margin-bottom: 20px;
     }
+
     h4 {
         font-weight: 500;
         color: $px-white;
         font-size: 22px;
         margin-bottom: 20px;
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
         }
     }
+
     .form-control {
         color: $px-white;
         background: none;
@@ -767,15 +911,18 @@
         box-shadow: none;
         font-size: 14px;
         height: calc(2em + 0.75rem + 2px);
+
         &.invalid {
             border-color: #dc3545 !important;
         }
-        .theme-light & {
+
+        @include px-light {
             color: $px-dark;
             border: 1px solid rgba($px-dark, 0.3);
             background: $px-white;
         }
     }
+
     textarea.form-control {
         height: auto;
     }
@@ -783,17 +930,22 @@
 
 .google-map {
     margin-top: 50px;
-    .theme-light & {
+
+    @include px-light {
         border: 5px solid $px-white;
     }
+
     @include down-sm {
         margin-top: 15px;
     }
+
     .embed-responsive-21by9 {
         filter: grayscale(1);
         -webkit-filter: grayscale(1);
+
         &:before {
             padding-top: 30%;
+
             @include down-sm {
                 padding-top: 55%;
             }
@@ -806,6 +958,7 @@
         top: 71px;
         right: 13px;
     }
+
     .demo-back-link {
         right: 13px;
         top: 130px;
@@ -816,9 +969,11 @@
     .container {
         width: 950px;
     }
+
     .about-me .img img {
         max-width: 100%;
     }
+
     .header-left .nav-menu li .nav-link {
         padding: 12px 30px;
     }
