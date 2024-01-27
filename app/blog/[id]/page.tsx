@@ -1,5 +1,11 @@
 import "highlight.js/scss/monokai-sublime.scss";
 
+export interface Props {
+    params: {
+        id: string;
+    };
+}
+
 export async function generateStaticParams() {
     const fs = await import("fs/promises");
     const path = await import("node:path");
@@ -10,7 +16,18 @@ export async function generateStaticParams() {
     return array.map(id => ({id}));
 }
 
-export default async function BlogPage({params}: {params: {id: string}}) {
+export async function generateMetadata({params}: Props) {
+    const json = await import(
+        `../../../../blog/${params.id}`
+    );
+
+    return {
+        title: `Tomáš Wróbel | ${json.title}`,
+        description: json.description,
+    };
+}
+
+export default async function BlogPage({params}: Props) {
     const {default: Component, ...json} = await import(
         `../../../../blog/${params.id}`
     );

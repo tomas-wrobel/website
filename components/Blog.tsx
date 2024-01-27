@@ -1,5 +1,5 @@
 import Link from "next/link";
-import data from "../app/(blog)/blog/data";
+import data from "../app/blog/data";
 
 export default async function Blog() {
 	return (
