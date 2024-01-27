@@ -7,19 +7,13 @@ export interface Props {
 }
 
 export async function generateStaticParams() {
-    const fs = await import("fs/promises");
-    const path = await import("node:path");
-    const array = await fs.readdir(
-        path.join(process.cwd(), "blog")
-    );
-
+    const {readdir} = await import("fs/promises");
+    const array = await readdir("app/blog/posts");
     return array.map(id => ({id}));
 }
 
 export async function generateMetadata({params}: Props) {
-    const json = await import(
-        `../../../../blog/${params.id}`
-    );
+    const json = await import(`../posts/${params.id}`);
 
     return {
         title: `Tomáš Wróbel | ${json.title}`,
@@ -28,21 +22,19 @@ export async function generateMetadata({params}: Props) {
 }
 
 export default async function BlogPage({params}: Props) {
-    const {default: Component, ...json} = await import(
-        `../../../../blog/${params.id}`
-    );
+    const post = await import(`../posts/${params.id}`);
 
     return (
         <div className="single-blog">
             <div className="container">
                 <div className="blog-feature-img">
-                    <img src={json.img} title="" alt="" />
+                    <img src={post.img} title="" alt="" />
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <article className="article">
                             <div className="article-title">
-                                <h2>{json.title}</h2>
+                                <h2>{post.title}</h2>
                                 <div className="media">
                                     <div className="avatar">
                                         <img
@@ -54,15 +46,13 @@ export default async function BlogPage({params}: Props) {
                                     <div className="media-body">
                                         <label>Tomáš Wróbel</label>
                                         <span>
-                                            {new Date(
-                                                json.date
-                                            ).toLocaleDateString("en")}
+                                            {new Date(post.date).toLocaleDateString("en")}
                                         </span>
                                     </div>
                                 </div>
                             </div>
                             <div className="article-content">
-                                <Component />
+                                <post.default />
                             </div>
                         </article>
                     </div>

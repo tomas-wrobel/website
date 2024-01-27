@@ -4,8 +4,8 @@ import type Blog from "../paginated";
 export default async function data() {
 	const data: Blog.Data[] = [];
 
-	for (const id of await readdir("blog")) {
-		const json = await import(`../../../blog/${id}`);
+	for (const id of await readdir("app/blog/posts")) {
+		const json = await import(`./posts/${id}`);
 		data.push({
 			id,
 			author: "Tomáš Wróbel",
