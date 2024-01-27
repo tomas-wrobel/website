@@ -7,8 +7,6 @@ import "@fortawesome/fontawesome-free/scss/solid.scss";
 import "bootstrap/scss/bootstrap.scss";
 import "et-line/style.css";
 import "./style.scss";
-import DayNight from "../components/DayNight";
-import Header from "../components/Header";
 
 const rubik = Rubik({
     display: "swap",
@@ -20,11 +18,7 @@ export default function RootLayout({children}: PropsWithChildren) {
     return (
         <html lang="en">
             <body className={rubik.className}>
-                <Header />
-                <main className="main-left">
-                    {children}
-                </main>
-                <DayNight />
+                {children}
             </body>
         </html>
     );

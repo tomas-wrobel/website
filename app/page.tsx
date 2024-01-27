@@ -5,6 +5,7 @@ import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Services from "../components/Services";
 import TypingAnimation from "../components/TypingAnimation";
+import Page from "../components/Page";
 
 export const metadata: Metadata = {
 	title: "Tomáš Wróbel | Home",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
     return (
-        <>
+        <Page current="root">
             <section className="pp-section pp-scrollable">
                 <div className="home-banner">
                     <div className="container">
@@ -62,6 +63,6 @@ export default async function Home() {
             {/* End Certificates */}
             {/* Contact us */}
             <Contact />
-        </>
+        </Page>
     );
 }

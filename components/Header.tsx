@@ -1,13 +1,10 @@
 "use client";
 import Link from "next/link";
 import {type FunctionComponent, useState, useRef, useEffect} from "react";
-import CertificatesMenu from "./CertificatesMenu";
-import Menu from "./Menu";
+import * as Menu from "./Menu";
 import classNames from "clsx";
 
-const Header: FunctionComponent<{certificates?: boolean}> = ({
-    certificates,
-}) => {
+const Header: FunctionComponent<Header.Props> = ({current}) => {
     const [sideBar, setSideBar] = useState(false);
     const dom = useRef<HTMLElement>(null);
 
@@ -72,7 +69,11 @@ const Header: FunctionComponent<{certificates?: boolean}> = ({
                             <h5>Tomáš Wróbel</h5>
                         </div>
                     </div>
-                    {certificates ? <CertificatesMenu /> : <Menu />}
+                    {current === "root" ? (
+                        <Menu.Root />
+                    ) : (
+                        <Menu.Fixed current={current} />
+                    )}
                 </div>
                 <div className="nav justify-content-center social-icons">
                     <a href="https://facebook.com/wrobeltomas">
@@ -92,4 +93,11 @@ const Header: FunctionComponent<{certificates?: boolean}> = ({
         </>
     );
 };
+
+declare namespace Header {
+    interface Props {
+        current?: Menu.Props["current"] | "root";
+    }
+}
+
 export default Header;

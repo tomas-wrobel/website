@@ -1,7 +1,16 @@
 "use client";
+import Link from "next/link";
 import {useEffect, type FunctionComponent} from "react";
 
-const Menu: FunctionComponent = () => {
+export const Links = [
+    ["", "Home"],
+    ["about", "About Me"],
+    ["services", "Services"],
+    ["blog", "Blog"],
+    ["contactus", "Contact Me"],
+] as const;
+
+export const Root: FunctionComponent = () => {
     useEffect(() => {
         function scroll() {
             let current = "";
@@ -27,6 +36,7 @@ const Menu: FunctionComponent = () => {
         }
 
         window.addEventListener("scroll", scroll);
+        window.requestAnimationFrame(scroll);
 
         return function () {
             window.removeEventListener("scroll", scroll);
@@ -35,33 +45,27 @@ const Menu: FunctionComponent = () => {
 
     return (
         <ul className="nav nav-menu" id="pp-menu">
-            <li className="active">
-                <a className="nav-link" href="#">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a className="nav-link" href="#about">
-                    <span>About Me</span>
-                </a>
-            </li>
-            <li>
-                <a className="nav-link" href="#services">
-                    <span>Services</span>
-                </a>
-            </li>
-            <li>
-                <a className="nav-link" href="#blog">
-                    <span>Blog</span>
-                </a>
-            </li>
-            <li>
-                <a className="nav-link" href="#contactus">
-                    <span>Contact Me</span>
-                </a>
-            </li>
+            {Links.map(([href, text]) => (
+                <li key={href}>
+                    <a className="nav-link" href={"#" + href}>
+                        <span>{text}</span>
+                    </a>
+                </li>
+            ))}
         </ul>
     );
 };
 
-export default Menu;
+export type Props = {current?: typeof Links[number][0]};
+
+export const Fixed: FunctionComponent<Props> = ({current}) => (
+    <ul className="nav nav-menu" id="pp-menu">
+        {Links.map(([href, text]) => (
+            <li key={href} className={href == current ? "active" : ""}>
+                <Link className="nav-link" href={"/#" + href}>
+                    <span>{text}</span>
+                </Link>
+            </li>
+        ))}
+    </ul>
+);
