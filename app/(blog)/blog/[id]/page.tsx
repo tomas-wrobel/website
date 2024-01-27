@@ -3,13 +3,11 @@ import "highlight.js/scss/monokai-sublime.scss";
 export async function generateStaticParams() {
     const fs = await import("fs/promises");
     const path = await import("node:path");
-
-    return fs.readdir(
-        path.join(
-            process.cwd(),
-            "blog"
-        )
+    const array = await fs.readdir(
+        path.join(process.cwd(), "blog")
     );
+
+    return array.map(id => ({id}));
 }
 
 export default async function BlogPage({params}: {params: {id: string}}) {
