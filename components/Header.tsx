@@ -66,7 +66,7 @@ const Header: FunctionComponent<Header.Props> = ({current}) => {
                                     style={{background: "#FFC300"}}
                                 />
                             </div>
-                            <h5>Tomáš Wróbel</h5>
+                            <h5>Tomáš W.</h5>
                         </div>
                     </div>
                     {current === "root" ? (
