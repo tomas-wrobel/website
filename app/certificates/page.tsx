@@ -17,7 +17,7 @@ export default async function CertificatesPage() {
 
     return (
         <Page>
-            <Blog data={blog} heading="My certificates" />;
+            <Blog data={blog} heading="My certificates" />
         </Page>
     )
 }
