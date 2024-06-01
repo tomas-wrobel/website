@@ -7,19 +7,19 @@ type Sitemap = MetadataRoute.Sitemap[number];
 export default async function sitemap(): Sitemaps {
 	return [
 		{
-			lastModified: "2024-01-29",
+			lastModified: "2024-06-01",
 			url: "https://tomaswrobel.dev",
 			changeFrequency: "monthly",
 			priority: 1,
 		},
 		{
-			lastModified: "2024-01-29",
+			lastModified: "2024-06-01",
 			url: "https://tomaswrobel.dev/certificates",
 			changeFrequency: "yearly",
 			priority: 0.8,
 		},
 		{
-			lastModified: "2024-01-29",
+			lastModified: "2024-06-01",
 			url: "https://tomaswrobel.dev/blog",
 			changeFrequency: "yearly",
 			priority: 0.8,

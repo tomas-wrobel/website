@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import Blog from "../paginated";
 import data from "./data.json";
-import Page from "../../components/Page";
+import Page from "../components/Page";
 
 export const metadata: Metadata = {
     title: "Tomáš Wróbel | Certifikáty",
