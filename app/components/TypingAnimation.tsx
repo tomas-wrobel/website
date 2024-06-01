@@ -19,7 +19,7 @@ const TypingAnimation: FunctionComponent<TypingAnimation.Props> = ({strings}) =>
         return function () {
             typed.destroy();
         };
-    }, []);
+    }, [strings]);
 
     return <span id="type-it" className="subtitle subtitle-typed" ref={ref} />;
 };
