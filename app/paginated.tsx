@@ -41,7 +41,7 @@ const Blog: FunctionComponent<Blog.Props> = ({
                                 <div className="blog-info">
                                     <div className="meta">
                                         {new Date(data.date).toLocaleDateString(
-                                            "en"
+                                            "cs"
                                         )}{" "}
                                         | {data.author}
                                     </div>

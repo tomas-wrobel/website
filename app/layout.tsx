@@ -16,7 +16,7 @@ const rubik = Rubik({
 
 export default function RootLayout({children}: PropsWithChildren) {
     return (
-        <html lang="en">
+        <html lang="cs">
             <body className={rubik.className}>
                 {children}
             </body>

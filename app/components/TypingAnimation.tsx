@@ -2,12 +2,12 @@
 import {useRef, type FunctionComponent, useEffect} from "react";
 import Typed from "typed.js";
 
-const TypingAnimation: FunctionComponent = () => {
+const TypingAnimation: FunctionComponent<TypingAnimation.Props> = ({strings}) => {
     const ref = useRef<HTMLElement>(null);
 
     useEffect(() => {
         const typed = new Typed(ref.current!, {
-            strings: ["Web Developer", "Student", "Certified Programmer"],
+            strings,
             typeSpeed: 100,
             backSpeed: 100,
             backDelay: 100,
@@ -23,5 +23,11 @@ const TypingAnimation: FunctionComponent = () => {
 
     return <span id="type-it" className="subtitle subtitle-typed" ref={ref} />;
 };
+
+declare namespace TypingAnimation {
+    export interface Props {
+        strings: string[];
+    }
+}
 
 export default TypingAnimation;

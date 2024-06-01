@@ -2,35 +2,28 @@
 import Link from "next/link";
 import {useEffect, type FunctionComponent} from "react";
 
-export const Links = [
-	["", "Home"],
-	["about", "About Me"],
-	["services", "Services"],
-	["blog", "Blog"],
-	["contactus", "Contact Me"],
-] as const;
+export const Links = Object.freeze([
+	["", "Domů"],
+	["about", "O mně"],
+	["fights", "Právní boje"],
+	["services", "Čím se zabývám"],
+	["contactus", "Kontakt"],
+]);
 
 export const Root: FunctionComponent = () => {
 	useEffect(() => {
 		function scroll() {
 			let current = "";
-			for (const section of document.querySelectorAll<HTMLElement>(
-				".pp-section"
-			)) {
+			for (const section of document.querySelectorAll<HTMLElement>(".pp-section")) {
 				const sectionTop = section.offsetTop;
 				const sectionHeight = section.clientHeight;
 				if (window.scrollY >= sectionTop - sectionHeight / 3) {
 					current = section.getAttribute("id") || "";
 				}
 			}
-			for (const li of document.querySelectorAll<HTMLLIElement>(
-				".nav-menu li"
-			)) {
+			for (const li of document.querySelectorAll<HTMLLIElement>(".nav-menu li")) {
 				li.classList.remove("active");
-				if (
-					new URL(li.querySelector("a")!.href).hash.slice(1) ===
-					current
-				) {
+				if (new URL(li.querySelector("a")!.href).hash.slice(1) === current) {
 					li.classList.add("active");
 				}
 			}

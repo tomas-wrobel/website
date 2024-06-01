@@ -46,7 +46,7 @@ export default async function BlogPage({params}: Props) {
                                     <div className="media-body">
                                         <label>Tomáš Wróbel</label>
                                         <span>
-                                            {new Date(post.date).toLocaleDateString("en")}
+                                            {new Date(post.date).toLocaleDateString("cs")}
                                         </span>
                                     </div>
                                 </div>

@@ -4,8 +4,8 @@ import data from "./data.json";
 import Page from "../../components/Page";
 
 export const metadata: Metadata = {
-    title: "Tomáš Wróbel | Certificates",
-    description: "Certificates I have earned - Sololearn, Programming Hub, and more.",
+    title: "Tomáš Wróbel | Certifikáty",
+    description: "Osvědčení a certifikáty, které jsem získal. Mezi certifikační společnosti patří například Programming Hub nebo SoloLearn.",
 };
 
 export default async function CertificatesPage() {
@@ -17,7 +17,7 @@ export default async function CertificatesPage() {
 
     return (
         <Page>
-            <Blog data={blog} heading="My certificates" />
+            <Blog data={blog} heading="Moje certifikáty" />
         </Page>
     )
 }
