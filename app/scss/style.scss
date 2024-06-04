@@ -568,6 +568,10 @@
     }
 }
 
+input[name="mobile"] {
+    display: none;
+}
+
 .resume-row {
     padding: 35px;
 
@@ -616,7 +620,31 @@
         }
     }
 
-    .rb-time {
+    h6 {
+        margin-bottom: 5px;
+
+        @include down-sm {
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+.rb-right {
+    > span {
+        display: block;
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    > p {
+        margin-bottom: 0;
+        max-width: 80%;
+        text-align: justify;
+    }
+
+    > label {
         display: inline-block;
         padding: 5px 10px;
         color: $px-white;
@@ -628,41 +656,37 @@
         position: absolute;
         top: 0;
         right: 0;
-
-        @include down-sm {
-            position: relative;
-            margin-bottom: 14px;
-            vertical-align: top;
-        }
     }
 
-    h6 {
-        margin-bottom: 5px;
-
-        @include down-sm {
-            br {
-                display: none;
-            }
-        }
-    }
-
-    label {
-        font-size: 13px;
-        margin-bottom: 12px;
-
-        @include down-sm {
+    @include down-sm {
+        > span {
             width: 100%;
             margin-bottom: 6px;
         }
-    }
 
-    .rb-right p {
-        margin-bottom: 0;
-        max-width: 80%;
-        text-align: justify;
+        > p {
+            max-width: 100%;
 
-        @include down-md {
-            display: none;
+            input:not(:checked) + & {
+                display: none;
+            }
+        }
+
+        > label {
+            position: relative;
+            margin-bottom: 14px;
+            vertical-align: top;
+
+            &::after {
+                // Chevron down unicode
+                content: "\25BC";
+                margin-left: 1ch;
+
+                input:checked + & {
+                    // Chevron up unicode
+                    content: "\25B2";
+                }
+            }
         }
     }
 }

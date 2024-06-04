@@ -102,10 +102,11 @@ export default async function Home() {
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
+                                    <input type="checkbox" aria-hidden name="mobile" id="ddhavirov" />
                                     <div className="rb-right">
                                         <h6>Dětský domov Havířov</h6>
-                                        <label>Dítě | Veřejný ochránce práv | 17. 2. 2023</label>
-                                        <div className="rb-time">Pochybení zjištěno</div>
+                                        <span>Dítě | Veřejný ochránce práv | 17. 2. 2023</span>
+                                        <label htmlFor="ddhavirov">Pochybení zjištěno</label>
                                         <p>
                                             Proti dětskému domovu jsem brojil poté, co
                                             jsem se nedovolal pomoci. Nelíbilo se mi,
@@ -129,10 +130,11 @@ export default async function Home() {
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
+                                    <input type="checkbox" aria-hidden name="mobile" id="nemhav" />
                                     <div className="rb-right">
                                         <h6>Nemocnice Havířov</h6>
-                                        <label>Stěžovatel | Nemocnice Havířov | Krajský úřad Moravskoslezského kraje | 15. 4. 2023</label>
-                                        <div className="rb-time">Důvodné</div>
+                                        <span>Stěžovatel | Nemocnice Havířov | Krajský úřad Moravskoslezského kraje | 15. 4. 2023</span>
+                                        <label htmlFor="nemhav">Důvodné</label>
                                         <p>
                                             Psychiatrii jsem vytkl, že mě opakovaně bez
                                             mého souhlasu hospitalizovala. Jen kvůli tvrzením
@@ -158,10 +160,11 @@ export default async function Home() {
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
+                                    <input type="checkbox" aria-hidden name="mobile" id="msk" />
                                     <div className="rb-right">
                                         <h6>Krajský úřad <br />Moravskoslezského kraje</h6>
-                                        <label>Stěžovatel | Veřejný ochránce práv | 13. 10. 2023</label>
-                                        <div className="rb-time">Pochybení zjištěno</div>
+                                        <span>Stěžovatel | Veřejný ochránce práv | 13. 10. 2023</span>
+                                        <label htmlFor="msk">Pochybení zjištěno</label>
                                         <p>
                                             Nesouhlasil jsem, jak Krajský úřad stížnost na
                                             nemocnici vyřídil. Trval jsem, že hospitalizace
@@ -185,10 +188,11 @@ export default async function Home() {
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
+                                    <input type="checkbox" aria-hidden name="mobile" id="mmo" />
                                     <div className="rb-right">
                                         <h6>Soudní řízení o péči &ndash; <br />přemístění v rámci nařízené ústavní výchovy</h6>
-                                        <label>Nezletilý | Okresní soud v Ostravě | 13. 12. 2023</label>
-                                        <div className="rb-time">Jednání odvoláno</div>
+                                        <span>Nezletilý | Okresní soud v Ostravě | 13. 12. 2023</span>
+                                        <label htmlFor="mmo">Jednání odvoláno</label>
                                         <p>
                                             Magistrát města Ostravy vyhodnotil ze závěru Nemocnice Havířov,
                                             faktu, že si stěžuji na dětský domov jakožto i jiných názorů,
@@ -210,10 +214,11 @@ export default async function Home() {
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
+                                    <input type="checkbox" aria-hidden name="mobile" id="__" />
                                     <div className="rb-right">
                                         <h6>Soudní řízení o péči &ndash; <br />přiznání svéprávnosti</h6>
-                                        <label>Navrhovatel | Okresní soud v Ostravě | Krajský soud v Ostravě | 28. 12. 2023</label>
-                                        <div className="rb-time">Jednání odvoláno</div>
+                                        <span>Navrhovatel | Okresní soud v Ostravě | Krajský soud v Ostravě | 28. 12. 2023</span>
+                                        <label htmlFor="__">Jednání odvoláno</label>
                                         <p>
                                             Za účelem získat výhodu časovou i argumentační jsem podal
                                             jediný typ soudního návrhu, který mi zákon jako nezletilému
@@ -222,8 +227,8 @@ export default async function Home() {
                                             A jednání bylo díky zahlcení soudu, kterému jsem nemálo přispěl, nařízeno až na 14. května
                                             (více než půl roku po podání návrhu magistrátem). Nad to jsem shledal závažnou chybu
                                             v usnesení o ustanovení opatrovníka, proti kterému jsem se odvolal. (Soud mi totiž opatrovníka
-                                            udělit ani neměl.) Jednání na okresním soudu se nemohlo konat (okresní soud nestihl odeslat spis),
-                                            ale Krajský soud v Ostravě dne 27. 5. 2024 odvolání vyhověl a věc vrátil k dalšímu projednání.
+                                            jmenovat ani neměl.) Jednání na okresním soudu se nemohlo konat (okresní soud nestihl odeslat spis),
+                                            ale Krajský soud v Ostravě dne 27. 5. 2024 odvolání vyhověl a věc vrátil k novému projednání.
                                         </p>
                                     </div>
                                 </div>
@@ -233,216 +238,216 @@ export default async function Home() {
                 </div>
             </section>
             <section id="blog" className="pp-section pp-scrollable section">
-			<div className="container">
-				<div className="title">
-					<h3>Blog</h3>
-				</div>
-				<div className="row">
-					{(await data()).slice(0, 4).map((blog) => (
-						<div className="col-md-6 m-15px-tb" key={blog.id}>
-							<div className="blog-grid">
-							<div className="blog-img">
-								<Link href={blog.url}>
-									<img src={blog.img} title="" alt="" />
-								</Link>
-							</div>
-							<div className="blog-info">
-								<div className="meta">{new Date(blog.date).toLocaleDateString("cs")}</div>
-								<h6>
-									<Link href={blog.url}>
-										{blog.name}
-									</Link>
-								</h6>
-							</div>
-						</div>
-						</div>
-					))}
-					<div className="col-12 read-more-blog text-center">
-						<Link href="/blog" className="px-btn px-btn-theme">
-							Zobrazit vše
-						</Link>
-					</div>
-				</div>
-			</div>
-		</section>
-        <section id="services" className="pp-section pp-scrollable">
-        <div className="container">
-            <div className="title">
-                <h3>Co zvládám?</h3>
-            </div>
-            <div className="row">
-                <div className="col-sm-6 m-15px-tb">
-                    <div className="feature-box-01 media">
-                        <i className="icon theme-bg icon-mobile" />
-                        <div className="feature-content media-body">
-                            <h5>Responzivní design</h5>
-                            <p>
-                                Webové stránky, které vytvořím, budou vypadat
-                                dobře na všech zařízeních. Od mobilu až po
-                                počítač. Nad to nenadužívám JavaScript, 
-                                protože nemusím.
-                            </p>
-                        </div>
+                <div className="container">
+                    <div className="title">
+                        <h3>Blog</h3>
                     </div>
-                </div>
-                <div className="col-sm-6 m-15px-tb">
-                    <div className="feature-box-01 media">
-                        <i className="icon theme-bg icon-global" />
-                        <div className="feature-content media-body">
-                            <h5>Webový vývoj</h5>
-                            <p>
-                                Vedle webů, tvořím zejména webové aplikace.
-                                Ty často fungují offline a vždy používají
-                                nejmodernější technologie. V tomto ohledu nedoporučuji Firefox.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-6 m-15px-tb">
-                    <div className="feature-box-01 media">
-                        <i className="icon theme-bg  icon-genius" />
-                        <div className="feature-content media-body">
-                            <h5>React.js</h5>
-                            <p>
-                                Mnoho firem využívá React. Znám ho velmi 
-                                ho dobře a tento web je na něm postavený. Zároveň
-                                se však nevyskytuje ve všech projektech, například 
-                                není ve <Link href="/blog/scrap.mdx">Scrapu</Link>, 
-                                i když Scratch ho používá. Jde to i bez Reactu.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-sm-6 m-15px-tb">
-                    <div className="feature-box-01 media">
-                        <i className="icon theme-bg icon-shield" />
-                        <div className="feature-content media-body">
-                            <h5>Bráním se</h5>
-                            <p>
-                                Sem tam, čas od času, jsem nucen podat
-                                stížnost proti úřadům, odvolat se na 
-                                krajský soud, nebo podat trestní oznámení.
-                                V mém životě zastává právo klíčovou roli,
-                                protože jsem odjakživa v náhradní rodinné péči.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section
-            id="contactus"
-            className="pp-section pp-scrollable section dark-bg"
-        >
-            <div className="container">
-                <div className="title">
-                    <h3>Kontaktujte mě</h3>
-                </div>
-                <div className="row">
-                    <div className="col-lg-5 col-xl-4 m-15px-tb">
-                        <div className="contact-info">
-                            <h4>Copak máte na srdíčku?</h4>
-                            <p>
-                                Pokud máte nějaký dotaz, nebo byste chtěli
-                                něco říct, neváhejte mě kontaktovat. Jsem
-                                k dispozici na e-mailu nebo využijte formulář.
-                            </p>
-                            <ul>
-                                <li className="media">
-                                    <i className="fas fa-map" />
-                                    <span className="media-body">
-                                        Ostrava / Havířov, Moravskoslezský kraj
-                                    </span>
-                                </li>
-                                <li className="media">
-                                    <i className="fas fa-envelope" />
-                                    <span className="media-body">
-                                        tomas.wrobel@email.cz
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="col-lg-7 col-xl-8 m-15px-tb">
-                        <div className="contact-form">
-                            <h4>Něco...</h4>
-                            <form
-                                id="contact-form"
-                                action="https://api.web3forms.com/submit"
-                                method="POST"
-                            >
-                                <input
-                                    type="hidden"
-                                    name="access_key"
-                                    value="2da01f10-3b5a-4781-8a5c-30bed0d194b8"
-                                />
-                                <input
-                                    type="hidden"
-                                    name="redirect"
-                                    value="https://web3forms.com/success"
-                                />
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <div className="form-group">
-                                            <input
-                                                name="name"
-                                                id="name"
-                                                placeholder="Jméno *"
-                                                className="form-control"
-                                                type="text"
-                                            />
-                                        </div>
+                    <div className="row">
+                        {(await data()).slice(0, 4).map((blog) => (
+                            <div className="col-md-6 m-15px-tb" key={blog.id}>
+                                <div className="blog-grid">
+                                    <div className="blog-img">
+                                        <Link href={blog.url}>
+                                            <img src={blog.img} title="" alt="" />
+                                        </Link>
                                     </div>
-                                    <div className="col-md-6">
-                                        <div className="form-group">
-                                            <input
-                                                name="email"
-                                                id="email"
-                                                placeholder="E-mail *"
-                                                className="form-control"
-                                                type="email"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-group">
-                                            <input
-                                                name="subject"
-                                                id="subject"
-                                                placeholder="Předmět *"
-                                                className="form-control"
-                                                type="text"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="form-group">
-                                            <textarea
-                                                name="message"
-                                                id="message"
-                                                placeholder="Zpráva *"
-                                                rows={5}
-                                                className="form-control"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="send">
-                                            <input
-                                                className="px-btn px-btn-theme"
-                                                type="submit"
-                                                value="Odeslat zprávu"
-                                            />
-                                        </div>
+                                    <div className="blog-info">
+                                        <div className="meta">{new Date(blog.date).toLocaleDateString("cs")}</div>
+                                        <h6>
+                                            <Link href={blog.url}>
+                                                {blog.name}
+                                            </Link>
+                                        </h6>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
+                        ))}
+                        <div className="col-12 read-more-blog text-center">
+                            <Link href="/blog" className="px-btn px-btn-theme">
+                                Zobrazit vše
+                            </Link>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section id="services" className="pp-section pp-scrollable">
+                <div className="container">
+                    <div className="title">
+                        <h3>Co zvládám?</h3>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-6 m-15px-tb">
+                            <div className="feature-box-01 media">
+                                <i className="icon theme-bg icon-mobile" />
+                                <div className="feature-content media-body">
+                                    <h5>Responzivní design</h5>
+                                    <p>
+                                        Webové stránky, které vytvořím, budou vypadat
+                                        dobře na všech zařízeních. Od mobilu až po
+                                        počítač. Nad to nenadužívám JavaScript,
+                                        protože nemusím.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 m-15px-tb">
+                            <div className="feature-box-01 media">
+                                <i className="icon theme-bg icon-global" />
+                                <div className="feature-content media-body">
+                                    <h5>Webový vývoj</h5>
+                                    <p>
+                                        Vedle webů, tvořím zejména webové aplikace.
+                                        Ty často fungují offline a vždy používají
+                                        nejmodernější technologie. V tomto ohledu nedoporučuji Firefox.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 m-15px-tb">
+                            <div className="feature-box-01 media">
+                                <i className="icon theme-bg  icon-genius" />
+                                <div className="feature-content media-body">
+                                    <h5>React.js</h5>
+                                    <p>
+                                        Mnoho firem využívá React. Znám ho velmi
+                                        ho dobře a tento web je na něm postavený. Zároveň
+                                        se však nevyskytuje ve všech projektech, například
+                                        není ve <Link href="/blog/scrap.mdx">Scrapu</Link>,
+                                        i když Scratch ho používá. Jde to i bez Reactu.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-6 m-15px-tb">
+                            <div className="feature-box-01 media">
+                                <i className="icon theme-bg icon-shield" />
+                                <div className="feature-content media-body">
+                                    <h5>Bráním se</h5>
+                                    <p>
+                                        Sem tam, čas od času, jsem nucen podat
+                                        stížnost proti úřadům, odvolat se na
+                                        krajský soud, nebo podat trestní oznámení.
+                                        V mém životě zastává právo klíčovou roli,
+                                        protože jsem odjakživa v náhradní rodinné péči.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                id="contactus"
+                className="pp-section pp-scrollable section dark-bg"
+            >
+                <div className="container">
+                    <div className="title">
+                        <h3>Kontaktujte mě</h3>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-5 col-xl-4 m-15px-tb">
+                            <div className="contact-info">
+                                <h4>Copak máte na srdíčku?</h4>
+                                <p>
+                                    Pokud máte nějaký dotaz, nebo byste chtěli
+                                    něco říct, neváhejte mě kontaktovat. Jsem
+                                    k dispozici na e-mailu nebo využijte formulář.
+                                </p>
+                                <ul>
+                                    <li className="media">
+                                        <i className="fas fa-map" />
+                                        <span className="media-body">
+                                            Ostrava / Havířov, Moravskoslezský kraj
+                                        </span>
+                                    </li>
+                                    <li className="media">
+                                        <i className="fas fa-envelope" />
+                                        <span className="media-body">
+                                            tomas.wrobel@email.cz
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-7 col-xl-8 m-15px-tb">
+                            <div className="contact-form">
+                                <h4>Něco...</h4>
+                                <form
+                                    id="contact-form"
+                                    action="https://api.web3forms.com/submit"
+                                    method="POST"
+                                >
+                                    <input
+                                        type="hidden"
+                                        name="access_key"
+                                        value="2da01f10-3b5a-4781-8a5c-30bed0d194b8"
+                                    />
+                                    <input
+                                        type="hidden"
+                                        name="redirect"
+                                        value="https://web3forms.com/success"
+                                    />
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="form-group">
+                                                <input
+                                                    name="name"
+                                                    id="name"
+                                                    placeholder="Jméno *"
+                                                    className="form-control"
+                                                    type="text"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="form-group">
+                                                <input
+                                                    name="email"
+                                                    id="email"
+                                                    placeholder="E-mail *"
+                                                    className="form-control"
+                                                    type="email"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="form-group">
+                                                <input
+                                                    name="subject"
+                                                    id="subject"
+                                                    placeholder="Předmět *"
+                                                    className="form-control"
+                                                    type="text"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-12">
+                                            <div className="form-group">
+                                                <textarea
+                                                    name="message"
+                                                    id="message"
+                                                    placeholder="Zpráva *"
+                                                    rows={5}
+                                                    className="form-control"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-12">
+                                            <div className="send">
+                                                <input
+                                                    className="px-btn px-btn-theme"
+                                                    type="submit"
+                                                    value="Odeslat zprávu"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </Page>
     );
 }

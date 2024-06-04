@@ -6,6 +6,7 @@ export const Links = Object.freeze([
 	["", "Domů"],
 	["about", "O mně"],
 	["fights", "Právní boje"],
+	["blog", "Blog"],
 	["services", "Čím se zabývám"],
 	["contactus", "Kontakt"],
 ]);
@@ -50,7 +51,7 @@ export const Root: FunctionComponent = () => {
 	);
 };
 
-export type Props = {current?: (typeof Links)[number][0]};
+export type Props = {current?: (typeof Links)[number][0];};
 
 export const Fixed: FunctionComponent<Props> = ({current}) => (
 	<ul className="nav nav-menu" id="pp-menu">
