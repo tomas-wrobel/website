@@ -248,7 +248,7 @@ export default async function Home() {
                                 <div className="blog-grid">
                                     <div className="blog-img">
                                         <Link href={blog.url}>
-                                            <img src={blog.img} title="" alt="" />
+                                            <img src={blog.img} title="" alt="" loading="lazy" />
                                         </Link>
                                     </div>
                                     <div className="blog-info">

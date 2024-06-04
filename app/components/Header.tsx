@@ -39,6 +39,7 @@ const Header: FunctionComponent<Header.Props> = ({current}) => {
                             open: sideBar,
                         })}
                         onClick={() => setSideBar(!sideBar)}
+                        aria-label="Menu"
                     >
                         <span />
                         <span />
@@ -76,16 +77,16 @@ const Header: FunctionComponent<Header.Props> = ({current}) => {
                     )}
                 </div>
                 <div className="nav justify-content-center social-icons">
-                    <a href="https://facebook.com/wrobeltomas">
+                    <a href="https://facebook.com/wrobeltomas" aria-label="Facebook">
                         <i className="fab fa-facebook-f" />
                     </a>
-                    <a href="https://github.com/tomas-wrobel">
+                    <a href="https://github.com/tomas-wrobel" aria-label="GitHub">
                         <i className="fab fa-github" />
                     </a>
-                    <a href="https://instagram.com/wrobel.tomas">
+                    <a href="https://instagram.com/wrobel.tomas" aria-label="Instagram">
                         <i className="fab fa-instagram" />
                     </a>
-                    <a href="https://www.linkedin.com/in/tomas-wrobel/">
+                    <a href="https://www.linkedin.com/in/tomas-wrobel/" aria-label="LinkedIn">
                         <i className="fab fa-linkedin-in" />
                     </a>
                 </div>
