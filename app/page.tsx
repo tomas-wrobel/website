@@ -396,6 +396,7 @@ export default async function Home() {
                                                     placeholder="Jméno *"
                                                     className="form-control"
                                                     type="text"
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -407,6 +408,7 @@ export default async function Home() {
                                                     placeholder="E-mail *"
                                                     className="form-control"
                                                     type="email"
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -418,6 +420,7 @@ export default async function Home() {
                                                     placeholder="Předmět *"
                                                     className="form-control"
                                                     type="text"
+                                                    required
                                                 />
                                             </div>
                                         </div>
@@ -429,6 +432,7 @@ export default async function Home() {
                                                     placeholder="Zpráva *"
                                                     rows={5}
                                                     className="form-control"
+                                                    required
                                                 />
                                             </div>
                                         </div>
