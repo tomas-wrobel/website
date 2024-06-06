@@ -98,7 +98,7 @@ export default async function Home() {
                             <div className="row">
                                 <div className="col-sm-3 col-md-3 col-xl-2">
                                     <div className="rb-left">
-                                        <img src="/fights/ddhavirov.jpg" title="" alt="" />
+                                        <img src="/fights/ddhavirov.jpg" title="" alt="" draggable={false} />
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
@@ -126,7 +126,7 @@ export default async function Home() {
                             <div className="row">
                                 <div className="col-sm-3 col-md-3 col-xl-2">
                                     <div className="rb-left">
-                                        <img src="/fights/nemhav.svg" title="" alt="" />
+                                        <img src="/fights/nemhav.svg" title="" alt="" draggable={false} />
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
@@ -156,7 +156,7 @@ export default async function Home() {
                             <div className="row">
                                 <div className="col-sm-3 col-md-3 col-xl-2">
                                     <div className="rb-left">
-                                        <img src="/fights/msk.svg" title="" alt="" />
+                                        <img src="/fights/msk.svg" title="" alt="" draggable={false} />
                                     </div>
                                 </div>
                                 <div className="col-sm-9 col-md-9 col-xl-10">
@@ -198,7 +198,7 @@ export default async function Home() {
                                             faktu, že si stěžuji na dětský domov jakožto i jiných názorů,
                                             že bude nejlepší, když půjdu do výchovného ústavu. Podal návrh soudu;
                                             ten zatím nerozhodl, ale jiný návrh (totožného požadavku) soud již dne
-                                            16. 3. 2023 zamítl. Tento návrh však má od počátku velký potenciál,
+                                            16. 3. 2024 zamítl. Tento návrh však má od počátku velký potenciál,
                                             protože má mnoho argumentů, které se mi nepodaří vyvrátit (byť přímo
                                             neodůvodňují výchovný ústav, upozornila moje kolizní opatrovnice).
                                         </p>
