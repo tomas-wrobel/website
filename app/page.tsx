@@ -2,7 +2,6 @@ import type {Metadata} from "next";
 import Link from "next/link";
 import data from "./blog/data";
 import Page from "./components/Page";
-import Czech from "./components/Czech";
 import TypingAnimation from "./components/TypingAnimation";
 
 export const metadata: Metadata = {
@@ -175,60 +174,6 @@ export default async function Home() {
                                             nemění na tom, že jsem byl připoutaný příliš dlouho
                                             a důvody (pokud byly) mezitím prokazatelně pominuly.
                                             Zprávu o šetření lze nalézt <a href="/fights/nemhav.pdf" target="_blank">zde</a>.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="resume-row">
-                            <div className="row">
-                                <div className="col-sm-3 col-md-3 col-xl-2">
-                                    <div className="rb-left">
-                                        <Czech />
-                                    </div>
-                                </div>
-                                <div className="col-sm-9 col-md-9 col-xl-10">
-                                    <input type="checkbox" aria-hidden name="mobile" id="mmo" />
-                                    <div className="rb-right">
-                                        <h6>Soudní řízení o péči &ndash; <br />přemístění v rámci nařízené ústavní výchovy</h6>
-                                        <span>Nezletilý | Okresní soud v Ostravě | 13. 12. 2023</span>
-                                        <label htmlFor="mmo">Jednání odvoláno</label>
-                                        <p>
-                                            Magistrát města Ostravy vyhodnotil ze závěru Nemocnice Havířov,
-                                            faktu, že si stěžuji na dětský domov jakožto i jiných názorů,
-                                            že bude nejlepší, když půjdu do výchovného ústavu. Podal návrh soudu;
-                                            ten zatím nerozhodl, ale jiný návrh (totožného požadavku) soud již dne
-                                            16. 3. 2024 zamítl. Tento návrh však má od počátku velký potenciál,
-                                            protože má mnoho argumentů, které se mi nepodaří vyvrátit (byť přímo
-                                            neodůvodňují výchovný ústav, upozornila moje kolizní opatrovnice).
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="resume-row">
-                            <div className="row">
-                                <div className="col-sm-3 col-md-3 col-xl-2">
-                                    <div className="rb-left">
-                                        <Czech />
-                                    </div>
-                                </div>
-                                <div className="col-sm-9 col-md-9 col-xl-10">
-                                    <input type="checkbox" aria-hidden name="mobile" id="__" />
-                                    <div className="rb-right">
-                                        <h6>Soudní řízení o péči &ndash; <br />přiznání svéprávnosti</h6>
-                                        <span>Navrhovatel | Okresní soud v Ostravě | Krajský soud v Ostravě | 28. 12. 2023</span>
-                                        <label htmlFor="__">Jednání odvoláno</label>
-                                        <p>
-                                            Za účelem získat výhodu časovou i argumentační jsem podal
-                                            jediný typ soudního návrhu, který mi zákon jako nezletilému
-                                            v dané situaci umožňoval &ndash; přiznání svéprávnosti (zplnoletnění).
-                                            Plán fungoval více než skvěle. Soud totiž řízení o péči spojil.
-                                            A jednání bylo díky zahlcení soudu, kterému jsem nemálo přispěl, nařízeno až na 14. května
-                                            (více než půl roku po podání návrhu magistrátem). Nad to jsem shledal závažnou chybu
-                                            v usnesení o ustanovení opatrovníka, proti kterému jsem se odvolal. (Soud mi totiž opatrovníka
-                                            jmenovat ani neměl.) Jednání na okresním soudu se nemohlo konat (okresní soud nestihl odeslat spis),
-                                            ale Krajský soud v Ostravě dne 27. 5. 2024 odvolání vyhověl a věc vrátil k novému projednání.
                                         </p>
                                     </div>
                                 </div>

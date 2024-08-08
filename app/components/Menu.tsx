@@ -2,14 +2,14 @@
 import Link from "next/link";
 import {useEffect, type FunctionComponent} from "react";
 
-export const Links = Object.freeze([
+export const Links = [
 	["", "Domů"],
 	["about", "O mně"],
 	["fights", "Právní boje"],
 	["blog", "Blog"],
 	["services", "Čím se zabývám"],
 	["contactus", "Kontakt"],
-]);
+] as const;
 
 export const Root: FunctionComponent = () => {
 	useEffect(() => {

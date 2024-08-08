@@ -313,3 +313,8 @@
         }
     }
 }
+
+// Laws are not code, really
+pre:has(code.language-law) {
+    white-space: normal;
+}
