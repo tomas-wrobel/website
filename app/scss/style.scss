@@ -959,12 +959,12 @@ input[name="mobile"] {
 }
 
 @media (max-width: 1200px) {
-    .color_switch {
+    header ~ .color_switch {
         top: 71px;
         right: 13px;
     }
 
-    .demo-back-link {
+    header ~ .demo-back-link {
         right: 13px;
         top: 130px;
     }
